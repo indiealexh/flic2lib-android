@@ -46,7 +46,7 @@ public class Flic2SampleApplication extends Application {
         super.onCreate();
 
         // Initialize the Flic2 manager to run on the same thread as the current thread (the main thread)
-        Flic2Manager manager = Flic2Manager.initAndGetInstance(getApplicationContext(), new Handler());
+        Flic2Manager manager = Flic2Manager.initAndGetInstance(getApplicationContext(), new Handler(Looper.getMainLooper()));
 
         // use manager later on
     }
